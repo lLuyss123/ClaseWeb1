@@ -80,3 +80,17 @@ const obreros = {
     }
 }
 calcsalario(obreros);
+
+// 4
+console.log("------- Ejercicio 4 -------");
+
+function calpromedades(edad){
+    let edadsinespa=edad.replace(/ /g, "");
+    let vectoredades=edadsinespa.split(",");
+    let suma=0;
+    vectoredades.forEach(i => {
+        suma=suma+parseInt(i);
+    });
+    console.log("El promedio de las edades ingresadas es de:",suma/vectoredades.length);
+}
+calpromedades("1,2,3,4,5,6");
