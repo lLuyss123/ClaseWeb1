@@ -1,4 +1,5 @@
 // 1
+console.log("------- Ejercicio 1 -------");
 function autosqueentran(placa){
     let amarillo=0, rosa=0, rojo=0, verde=0, azul=0;
     console.log("------------PLACAS------------")
@@ -31,3 +32,51 @@ const autos = {
 }
 
 autosqueentran(autos);
+
+// 3
+console.log("------- Ejercicio 3 -------");
+function calcsalario(datos){
+    for (const i in datos) {
+        if (datos[i].horas <= 40) {
+            datos[i].salario=(20*datos[i].horas);
+        }else{
+            datos[i].salario=(20*40)+(25*(datos[i].horas-40));
+        }
+    }
+    console.log("------ Sin Horas Extras ------");
+    for (const i in datos) {
+        if (datos[i].horas <= 40) {
+            console.log(datos[i]);
+        }
+    }
+    console.log("------ Con Horas Extras ------");
+    for (const i in datos) {
+        if (datos[i].horas > 40) {
+            console.log(datos[i]);
+        }
+    }
+}
+
+const obreros = {
+    obrero1: {
+        nombre: "Juanito Peres",
+        horas: 40,
+        salario:null
+    },
+    obrero2:{
+        nombre: "Ivan Monsalves",
+        horas: 100,
+        salario:null
+    },
+    obrero3:{
+        nombre: "Mateo Mat",
+        horas: 200,
+        salario:null
+    },
+    obrero4:{
+        nombre: "Santiago Ultimo",
+        horas: 25,
+        salario:null
+    }
+}
+calcsalario(obreros);
