@@ -94,3 +94,12 @@ function calpromedades(edad){
     console.log("El promedio de las edades ingresadas es de:",suma/vectoredades.length);
 }
 calpromedades("1,2,3,4,5,6");
+
+// 5
+console.log("------- Ejercicio 5 -------");
+
+function encuentramenor(conjunto){
+    console.log(...conjunto);
+    console.log("El número menor del conjunto de datos es:",Math.min(...conjunto));
+}
+encuentramenor([33,70,80,30,29,15,11]);
