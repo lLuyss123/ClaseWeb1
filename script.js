@@ -46,13 +46,15 @@ function calcsalario(datos){
     console.log("------ Sin Horas Extras ------");
     for (const i in datos) {
         if (datos[i].horas <= 40) {
-            console.log(datos[i]);
+            console.log("Nombre:",datos[i].nombre);
+            console.log("Salatio:",datos[i].salario);
         }
     }
     console.log("------ Con Horas Extras ------");
     for (const i in datos) {
         if (datos[i].horas > 40) {
-            console.log(datos[i]);
+            console.log("Nombre:",datos[i].nombre);
+            console.log("Salatio:",datos[i].salario);
         }
     }
 }
@@ -103,3 +105,47 @@ function encuentramenor(conjunto){
     console.log("El número menor del conjunto de datos es:",Math.min(...conjunto));
 }
 encuentramenor([33,70,80,30,29,15,11]);
+
+// 6
+console.log("------- Ejercicio 6 -------");
+
+function subioobajopeso(datos){
+    
+    for (const i in datos) {
+        let total = datos[i].pesob1_b10.reduce((a, b) => a + b, 0);
+        let prom=(total/10);
+        console.log("Peso Inicial:",datos[i].peso_inicial,"KG");
+        console.log("Peso Promedio:",prom,"KG");
+        if (prom>datos[i].peso_inicial) {
+            console.log(i,"Subió de Peso");
+            console.log("Subió:",(prom - datos[i].peso_inicial).toFixed(2),"KG");
+        } else {
+            console.log(i,"Bajó de Peso");
+            console.log("Bajó:",(prom - datos[i].peso_inicial).toFixed(2) * -1,"KG");
+        }
+        console.log("-----------");
+    }
+}
+const infopersonas = {
+    miempro1:{
+        peso_inicial:50,
+        pesob1_b10: [50,60,55,48,49,48,50,48,48,49]
+    },
+    miempro2:{
+        peso_inicial:55,
+        pesob1_b10: [50,51,52,55,51,53,54,55,51,55]
+    },
+    miempro3:{
+        peso_inicial:60,
+        pesob1_b10: [65,54,62,60,59,59,58,60,61,60]
+    },
+    miempro4:{
+        peso_inicial:75,
+        pesob1_b10: [80,76,77,78,79,70,70,71,72,70]
+    },
+    miempro5:{
+        peso_inicial:80,
+        pesob1_b10: [80,90,85,84,83,75,76,77,78,79]
+    }
+}
+subioobajopeso(infopersonas);
