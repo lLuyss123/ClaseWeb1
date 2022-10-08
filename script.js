@@ -149,3 +149,18 @@ const infopersonas = {
     }
 }
 subioobajopeso(infopersonas);
+
+// 7
+console.log("------- Ejercicio 7 -------");
+
+function calctotalcompra(datos){
+    let suma=0;
+    for (let i = 0; i < datos.length; i++) {
+        if (i%2==0) {
+            suma=suma+(datos[i]*datos[i+1]);
+        }
+    }
+    console.log("El total a pagar es de:",suma);
+}
+calctotalcompra([1000,8,5000,2,10000,1,400,6,9500,5]);
+
