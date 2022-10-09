@@ -164,3 +164,29 @@ function calctotalcompra(datos){
 }
 calctotalcompra([1000,8,5000,2,10000,1,400,6,9500,5]);
 
+// 8
+console.log("------- Ejercicio 8 -------");
+
+function calcdescuento(edades){
+    const PRECIO=10000;
+    let total=0;
+    for (let i = 0; i < edades.length; i++) {
+        if (edades[i]<5) {
+            console.log("No puede ingresar porque su edad es menor que 5")
+        } else if (edades[i]>=5 && edades[i]<=14) {
+            total=total+(PRECIO*0.35);
+        }else if (edades[i]>=15 && edades[i]<=19) {
+            total=total+(PRECIO*0.25);
+        }else if (edades[i]>=20 && edades[i]<=45) {
+            total=total+(PRECIO*0.10);
+        }else if (edades[i]>=46 && edades[i]<=65) {
+            total=total+(PRECIO*0.25);
+        }else{
+            total=total+(PRECIO*0.35);
+        }
+        
+    }
+    console.log("El total de dinero que no está ganando es:",total)
+}
+calcdescuento([5,4,20,25,35,40,59,77,12]);
+
