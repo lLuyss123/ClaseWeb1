@@ -265,3 +265,19 @@ function fibonachi(n){
 }
 
 fibonachi(10);
+
+// 14
+
+console.log("------- Ejercicio 14 -------");
+
+function mcd(a,b){
+    let temporal;
+    while (b !== 0) {
+        temporal = b;
+        b = a % b;
+        a = temporal;
+    }
+    console.log("El máximo común divisor entre los números es:",a);
+}
+
+mcd(5,25);
