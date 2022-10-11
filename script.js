@@ -238,3 +238,30 @@ function numEnteros(num){
     console.log("Total números impares:",impar);
 }
 numEnteros(202589);
+
+// 13
+console.log("------- Ejercicio 13 -------");
+
+
+function fibonachi(n){
+    let sum0=0,sump=0,sumi=0;
+    let limit = n;
+    let fibo = [0,1];
+    for(let i=2; i <= limit; i++){
+        fibo[i] = fibo[i - 2] + fibo[i - 1];;
+    }
+    for (let i = 0; i < fibo.length; i++) {
+        if (fibo[i]==0) {
+            sum0=sum0+1;
+        } else if (fibo[i]%2==0) {
+            sump=sump+1;
+        } else {
+            sumi=sumi+1;
+        }
+    }
+    console.log("Total de ceros:",sum0);
+    console.log("Total de pares:",sump);
+    console.log("Total de impares:",sumi);
+}
+
+fibonachi(10);
