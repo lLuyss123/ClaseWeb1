@@ -193,7 +193,6 @@ calcdescuento([5,4,20,25,35,40,59,77,12]);
 // 11
 console.log("------- Ejercicio 11 -------");
 
-let sum=0,pro=1,prom=0;
 function esPrimo(num) {
     for(let i = 2; i < num; i++)
         if(num % i === 0) return false;
@@ -211,7 +210,31 @@ function calTodosPrimos(numeros) {
     }
     console.log("Suma:",sum);
     console.log("Productoria:",pro);
-    console.log("Promedio:",prom/numeros.length)
+    console.log("Promedio:",prom/numeros.length);
 }
 calTodosPrimos([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]);
 
+// 12
+console.log("------- Ejercicio 12 -------");
+
+function numEnteros(num){
+    let vecnum=[...num.toString()];
+    let sum=0,pro=1,prom=0,par=0,impar=0;
+    for (let i = 0; i < vecnum.length; i++) {
+        sum=sum+parseInt(vecnum[i]);
+        pro=pro*parseInt(vecnum[i]);
+        prom=prom+parseInt(vecnum[i]);
+        if (vecnum[i]%2==0) {
+            par=par+1;
+        }else{
+            impar=impar+1;
+        }
+    }
+    console.log("Suma:",sum);
+    console.log("Productoria:",pro);
+    console.log("Promedio:",prom/vecnum.length);
+    console.log("El total de los dígitos del número son:",num.toString().length);
+    console.log("Total números pares:",par);
+    console.log("Total números impares:",impar);
+}
+numEnteros(202589);
