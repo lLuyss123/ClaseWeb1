@@ -190,3 +190,28 @@ function calcdescuento(edades){
 }
 calcdescuento([5,4,20,25,35,40,59,77,12]);
 
+// 11
+console.log("------- Ejercicio 11 -------");
+
+let sum=0,pro=1,prom=0;
+function esPrimo(num) {
+    for(let i = 2; i < num; i++)
+        if(num % i === 0) return false;
+    return num > 1;
+}
+
+function calTodosPrimos(numeros) {
+    let sum=0,pro=1,prom=0;
+    for (let i = 0; i < numeros.length; i++) {
+        if (esPrimo(numeros[i])) {
+            sum=sum+numeros[i];
+            pro=pro*numeros[i];
+            prom=prom+numeros[i];
+        }
+    }
+    console.log("Suma:",sum);
+    console.log("Productoria:",pro);
+    console.log("Promedio:",prom/numeros.length)
+}
+calTodosPrimos([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]);
+
