@@ -281,3 +281,19 @@ function mcd(a,b){
 }
 
 mcd(5,25);
+
+// 15
+
+console.log("------- Ejercicio 15 -------");
+
+function calcPoblacion(){
+    let año = 1994, pA=25000000,pB=19900000;
+    while (pB<pA) {
+        pA=pA+((2/100)*100);
+        pB=pB+((3/100)*100);
+        año=año+1;
+    }
+    console.log("El año en el que supera es:",año)
+}
+
+calcPoblacion();
