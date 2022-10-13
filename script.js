@@ -227,6 +227,38 @@ function calcdescuento(edades){
 }
 calcdescuento([5,4,20,25,35,40,59,77,12]);
 
+// 10
+
+console.log("------- Ejercicio 10 -------");
+
+function votos(){
+    let voto,candi1=0,candi2=0,candi3=0;
+    for(let i = 0; i < 50000; i++){
+        voto= 1+Math.floor(Math.random() * 3);
+        if (voto==1) {
+            candi1=candi1+1;
+        }else if (voto==2) {
+            candi2=candi2+1;
+        }else{
+            candi3=candi3+1;
+        }
+    }
+    if (candi1>candi2 && candi1>candi3) {
+        console.log("El ganador es el candidato #1 con un total de votos de:",candi1);
+    }else if (candi2>candi1 && candi2>candi3) {
+        console.log("El ganador es el candidato #2 con un total de votos de:",candi2);
+    }else if (candi3>candi1 && candi3>candi2) {
+        console.log("El ganador es el candidato #3 con un total de votos de:",candi3)
+    }else{
+        console.log("Hubo empate")
+        console.log("Candidato #1 total de votos:",candi1);
+        console.log("Candidato #2 total de votos:",candi2);
+        console.log("Candidato #3 total de votos:",candi3);
+    }
+}
+
+votos();
+
 // 11
 console.log("------- Ejercicio 11 -------");
 
