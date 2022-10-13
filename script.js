@@ -33,6 +33,43 @@ const autos = {
 
 autosqueentran(autos);
 
+// 2
+
+console.log("------- Ejercicio 2 -------");
+
+function Soologico(animales){
+    let x, n=animales, total, edad, categoria1, categoria2, categoria3, animal;
+    categoria1 = 0;
+    categoria2 = 0;
+    categoria3 = 0;
+    if (n=="Elefante") {
+        animal="Elefante";
+        total=20;
+    }else if (n=="Jirafa") {
+        animal="Jirafa";
+        total=15;
+    }else if (n=="Chimpances") {
+        animal="Chimpances";
+        total=40;
+    }
+    for (let i = 0; i < total; i++) {
+        edad= 1+Math.floor(Math.random() * 3);
+        if (edad >= 0 && edad <= 1) {
+            categoria1=categoria1+1;
+        }else if (edad < 3) {
+            categoria2 = categoria2 + 1;
+        }else{
+            categoria3 = categoria3 + 1;
+        }
+    }
+    console.log(" Porcentaje de edades de",animal);
+    console.log((categoria1/total)*100,"% de 0 a 1 año");
+    console.log((categoria2/total)*100,"% de mas de 1 año y menos de 3");
+    console.log((categoria3/total)*100,"% de 3 años o más");
+}
+
+Soologico("Jirafa")
+
 // 3
 console.log("------- Ejercicio 3 -------");
 function calcsalario(datos){
