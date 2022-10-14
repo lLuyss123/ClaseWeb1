@@ -71,6 +71,7 @@ function Soologico(animales){
 Soologico("Jirafa")
 
 // 3
+
 console.log("------- Ejercicio 3 -------");
 function calcsalario(datos){
     for (const i in datos) {
@@ -121,6 +122,7 @@ const obreros = {
 calcsalario(obreros);
 
 // 4
+
 console.log("------- Ejercicio 4 -------");
 
 function calpromedades(edad){
@@ -144,6 +146,7 @@ function encuentramenor(conjunto){
 encuentramenor([33,70,80,30,29,15,11]);
 
 // 6
+
 console.log("------- Ejercicio 6 -------");
 
 function subioobajopeso(datos){
@@ -188,6 +191,7 @@ const infopersonas = {
 subioobajopeso(infopersonas);
 
 // 7
+
 console.log("------- Ejercicio 7 -------");
 
 function calctotalcompra(datos){
@@ -202,6 +206,7 @@ function calctotalcompra(datos){
 calctotalcompra([1000,8,5000,2,10000,1,400,6,9500,5]);
 
 // 8
+
 console.log("------- Ejercicio 8 -------");
 
 function calcdescuento(edades){
@@ -226,6 +231,40 @@ function calcdescuento(edades){
     console.log("El total de dinero que no está ganando es:",total)
 }
 calcdescuento([5,4,20,25,35,40,59,77,12]);
+
+// 9
+
+console.log("------- Ejercicio 9 -------");
+
+function Kiaautos(){
+    let vendedor=[],comision_ven=[],venta,comision;
+    let i=0,ventas=0;
+    while (i<=2) {
+        vendedor[i]=("Vendedor",i);
+        venta=999909+Math.floor(Math.random()*200);
+        if (venta >= 1000000 && venta <3000000) {
+            comision=venta*0.03;
+        }else if ( venta >= 3000000 && venta <5000000) {
+            comision=venta*0.04;
+        }else if (venta >=5000000 && venta <7000000) {
+            comision=venta*0.05;
+        }else if (venta >= 7000000) {
+            comision=venta*0.06;
+        }else if (venta<1000000) {
+            console.log("El vendedor no tiene comisiones");
+            comision=0;
+        }
+        comision_ven[i]=comision;
+        i=i+1;
+    }
+    i=0;
+    while (i<=2) {
+        console.log("Vendedor",vendedor[i],"Comision:",comision_ven[i]);
+        i=i+1;
+    }
+}
+
+Kiaautos();
 
 // 10
 
